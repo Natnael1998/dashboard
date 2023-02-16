@@ -4,6 +4,8 @@ import {BsFillBellFill,BsDashLg ,BsPlusSquareFill} from "react-icons/bs"
 import {RxDividerVertical} from "react-icons/rx"
 import { Line } from 'react-chartjs-2'
 import "../Overview.css"
+
+
 import {
   Chart as ChartJS,
   LineElement,
@@ -12,6 +14,7 @@ import {
   PointElement
 
 } from "chart.js"
+import { UserAuth } from '../context/AuthContext'
 ChartJS.register(
   LineElement,
   CategoryScale,
@@ -20,6 +23,7 @@ ChartJS.register(
 
 )
 const OverView = () => {
+  const { user, logOut } = UserAuth();
   const data = {
     labels:[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22],
     datasets :[{
@@ -100,7 +104,7 @@ tension:0.5,
 </div>
 
 <div className='account'>
-  <p>Wawa fike</p>
+  <p>{user?.email ? user?.email.slice(0, user?.email.lastIndexOf("@")) : "default"}</p>
   <img src="https://th.bing.com/th/id/OIP.IrUBHhdMo6wWLFueKNreRwHaHa?pid=ImgDet&rs=1" alt="" />
   
 </div>

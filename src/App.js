@@ -4,20 +4,24 @@ import SideBar from "./components/SideBar";
 import Tickets from "./components/Tickets";
 
 import Login from "./pages/Login";
-// import { AuthContextProvider } from "./context/AuthContext";
+import { AuthContextProvider } from "./context/AuthContext";
+import SignUp from "./pages/SignUp";
 function App() {
+
   return (
     <>
-{/* <AuthContextProvider> */}
+<AuthContextProvider>
 <SideBar />
     <Routes>
+     
 
-<Route path="/login" element={<Login />} />
+    <Route path="/login" element={<Login />} default/>
+<Route path="/" element={<SignUp />}  />
       <Route path="/overview" element={<OverView />} />
 <Route path="/tickets" element={<Tickets />} />
 
     </Routes>
-{/* </AuthContextProvider> */}
+</AuthContextProvider>
 
     </>
 

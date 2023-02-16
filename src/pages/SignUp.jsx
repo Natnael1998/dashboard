@@ -3,22 +3,18 @@ import { useNavigate } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
 import { Link } from 'react-router-dom';
 import "../login.css"
-const Login = () => {
-  const [email, setEmail] = useState("");
+const SignUp = () => {
+    const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { user, logIn } = UserAuth();
-  const [error,setError] = useState("")
-  const navigate = useNavigate();
+  const { user, signUp } = UserAuth();
+  const navigate = useNavigate()
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError("")
     try {
-      await logIn(email, password);
-      navigate("/overview");
+      await signUp(email, password);
+      navigate("/overview")
     } catch (error) {
       console.log(error);
-      setError(error.message)
-      alert(error.message.slice(22,-2))
     }
   };
   return (
@@ -30,14 +26,13 @@ const Login = () => {
   </div>
 
   <p className='loginTitle'>Dashboard Kit</p>
-<p className='loginSubTitle'>Log in to Dashboard Kit</p>
+<p className='loginSubTitle'>Sign Up to Dashboard Kit</p>
 <p className='loginDetails'>Enter your email and password below</p>
   
 <div className='formContain'>
   <label htmlFor="">Email</label>
   <input type="email" placeholder='Email address' 
-  
-  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
   
   />
 <div className='pass'>
@@ -45,20 +40,19 @@ const Login = () => {
 
 </div>
   <input type="password" placeholder='Password' 
-  onChange={(e) => setPassword(e.target.value)}
+                  onChange={(e) => setPassword(e.target.value)}
   
   />
 
-  <button onClick={handleSubmit}>Log in</button>
+  <button onClick={handleSubmit}>Sign up</button>
 </div>
 
 
 
 <div className='formFooter'>
-<p>Dont have an account? </p> 
+<p>Already have an account? </p> 
 
-
-<Link to="/" className='ll'><p className='highlight'>Sign up</p>
+<Link to="/login" className='ll'><p className='highlight'>Log in</p>
 </Link>
 
 
@@ -75,4 +69,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default SignUp
