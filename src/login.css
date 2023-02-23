@@ -9,7 +9,9 @@
   height: 100vh;
 background-size: 100%;
 
+
 }
+
 
 .image{
   mix-blend-mode: darken;
@@ -105,7 +107,7 @@ input::placeholder {
 
 
 
-.formContain>button {
+.ll {
   background: #67C4A7;
   border-radius: 10px;
 
@@ -116,6 +118,7 @@ input::placeholder {
   width: 356px;
   color: white;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 input[type="checkbox"]{

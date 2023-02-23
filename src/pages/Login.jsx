@@ -36,8 +36,10 @@ const Login = () => {
         <input type="checkbox" name="" id="" />
         <p>Remember me</p>
       </div>
+    <Link to="/home">
+    <button className='ll'>Sign in</button>
     
-      <button >Sign in</button>
+    </Link>
     </div>
     
     
