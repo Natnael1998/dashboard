@@ -1,76 +1,55 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { UserAuth } from '../context/AuthContext';
+
 import { Link } from 'react-router-dom';
 import "../login.css"
+import logo from "../assets/Rectangle 6.png"
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const { user, logIn } = UserAuth();
-  const [error,setError] = useState("")
-  const navigate = useNavigate();
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError("")
-    try {
-      await logIn(email, password);
-      navigate("/overview");
-    } catch (error) {
-      console.log(error);
-      setError(error.message)
-      alert(error.message.slice(22,-2))
-    }
-  };
+  
   return (
   
     <div className='loginContainer'>
-<div className="loginForm">
-  <div className="logoBackGround">
-<div className='logo'></div>
-  </div>
-
-  <p className='loginTitle'>Dashboard Kit</p>
-<p className='loginSubTitle'>Log in to Dashboard Kit</p>
-<p className='loginDetails'>Enter your email and password below</p>
-  
-<div className='formContain'>
-  <label htmlFor="">Email</label>
-  <input type="email" placeholder='Email address' 
-  
-  onChange={(e) => setEmail(e.target.value)}
-  
-  />
-<div className='pass'>
-<label htmlFor="">Password</label><small className='smallText'>Forgot password?</small>
-
-</div>
-  <input type="password" placeholder='Password' 
-  onChange={(e) => setPassword(e.target.value)}
-  
-  />
-
-  <button onClick={handleSubmit}>Log in</button>
-</div>
-
-
-
-<div className='formFooter'>
-<p>Dont have an account? </p> 
-
-
-<Link to="/" className='ll'><p className='highlight'>Sign up</p>
-</Link>
-
-
-</div>
-
-</div>
-
-
-
-
+      <img className='image' src={logo} alt="" />
+    <div className="loginForm">
+      
+    <p className='loginSubTitle'>Sign In</p>
+    <p className='loginDetails'>(Admin or Employee Sign In)</p>
+      
+    <div className='formContain'>
+      <label htmlFor="">Your Email</label>
+      <input type="email" placeholder='email@address.com' 
+      
+    
+      
+      />
+    <div>
+    <label htmlFor="">Your Password</label>
+    
     </div>
-   
+      <input type="password" placeholder='+6 characters required' 
+     
+      
+      />
+
+      <div className='r'>
+        
+        <input type="checkbox" name="" id="" />
+        <p>Remember me</p>
+      </div>
+    
+      <button >Sign in</button>
+    </div>
+    
+    
+    
+    
+    
+    </div>
+    
+    
+    
+    
+        </div>
     
   )
 }

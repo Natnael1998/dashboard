@@ -1,238 +1,136 @@
 
 .loginContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #363740;
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-  overflow: hidden;
-  }
-  
-  .loginForm {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    height: 582px;
-    width: 380px;
-    background-color: #FFFFFF;
-    border: 1px solid #DFE0EB;
-    border-radius: 8px;
-    position: relative;
-  }
-  
-  .logoBackGround {
-    position: relative;
-    background: #3751FF;
-    height: 48px;
-    width: 48px;
-    border-radius: 50%;
-    margin-top: 40px;
-  }
-  
-  .logo {
-    position: absolute;
-    left: 34.38%;
-    right: 28.12%;
-    top: 28.12%;
-    bottom: 28.12%;
-    background: linear-gradient(143.7deg, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 100%);
-    border-radius: 0 50% 50% 0;
-  }
-  
-  .loginTitle {
-    position: absolute;
-    height: 24px;
-    left: 32px;
-    right: 32px;
-    top: 100px;
-  
-    font-family: 'Mulish';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 19px;
-    line-height: 24px;
-  
-  
-    text-align: center;
-    letter-spacing: 0.4px;
-  
-  
-  
-    color: #A4A6B3;
-  
-    opacity: 0.7;
-  }
-  
-  .loginSubTitle {
-    position: absolute;
-    height: 30px;
-    left: 32px;
-    right: 32px;
-    top: 156px;
-    font-family: 'Mulish';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
-    text-align: center;
-    letter-spacing: 0.3px;
-  
-  
-  
-    color: #252733;
-  }
-  
-  .loginDetails {
-    position: absolute;
-    height: 20px;
-    left: 32px;
-    right: 32px;
-    top: 198px;
-  
-    
-    font-family: 'Mulish';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-   
-    text-align: center;
-    letter-spacing: 0.3px;
-  
-    color: #9FA2B4;
-  }
-  
-  .formContain {
-    position: absolute;
-  
-  
-    left: 20px;
-    top: 288px;
-  
-  
-    display: flex;
-    flex-direction: column;
-  
-  }
-  
-  label {
-    margin-bottom: 6px;
-    font-family: 'Mulish';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
-  
-  
-  
-    color: #9FA2B4;
-  
-  }
-  
-  input {
-    margin-bottom: 24px;
-    width: 316px;
-    height: 42px;
-    background: #FCFDFE;
-    padding: 11px 6px 11px 16px;
-  
-    border: 1px solid #F0F1F7;
-    border-radius: 8px;
-  
-  
-  }
-  
-  input::placeholder {
-    font-family: 'Mulish';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-  
-    letter-spacing: 0.3px;
-  
-  
-    color: #4B506D;
-  
-    opacity: 0.4;
-  
-  }
-  
-  .pass {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .smallText {
-    font-family: 'Mulish';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 13px;
-    
-  
-  
-    letter-spacing: 0.1px;
-  
-  
-  
-    color: #9FA2B4;
-  }
-  
-  .formContain>button {
-    background: #3751FF;
-  
-    box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24);
-    border-radius: 8px;
-    border: none;
-    height: 48px;
-    width: 316px;
-    color: white;
-  }
-  
-  .formFooter {
-    position: absolute;
-  
-    height: 20px;
-    left: calc(50% - 158px/2 - 28px);
-    bottom: 40px;
-  
-  
-  
-    font-family: 'Mulish';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-  
-    text-align: center;
-    letter-spacing: 0.3px;
-  
-  
-  
-    color: #9FA2B4;
-    display: flex;
-  
-  
-  }
-  
-  .highlight {
-    font-family: 'Mulish';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-  
-  
-    text-align: center;
-    letter-spacing: 0.2px;
-  
-  
-    color: #3751FF;
-    margin-left: 5px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./assets/495\ 1.jpg");
+  width: 100vw;
+  height: 100vh;
+background-size: 100%;
+
+}
+
+.image{
+  mix-blend-mode: darken;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+width: 132px;
+margin-bottom: 25px;
+}
+
+
+.loginForm {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+ 
+  background-color: #FFFFFF;
+  border: 1px solid #DFE0EB;
+  border-radius: 8px;
+  position: relative;
+  padding: 37px 57px 37px 57px;
+}
+
+
+
+
+.loginSubTitle {
+ 
+  font-style: normal;
+font-weight: 600;
+font-size: 25px;
+line-height: 20px;
+margin-bottom: 15px;
+color: #000000;
+}
+
+.loginDetails {
+  font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 20px;
+color: #000000;
+margin-bottom: 65px;
+}
+
+.formContain {
+  
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+label {
+  font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 40px;
+margin-bottom: 8px;
+
+
+color: #000000;
+
+}
+
+input {
+  margin-bottom: 24px;
+  width: 356px;
+  height: 42px;
+  background: #FCFDFE;
+  padding: 28px 32px 28px 35px;
+
+  border: 1px solid #F0F1F7;
+  border-radius: 8px;
+
+
+}
+
+input::placeholder {
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  letter-spacing: 0.3px;
+
+
+  color: #4B506D;
+
+  opacity: 0.5;
+
+}
+
+
+
+
+.formContain>button {
+  background: #67C4A7;
+  border-radius: 10px;
+
+  box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24);
+  
+  border: none;
+  height: 48px;
+  width: 356px;
+  color: white;
+  margin-top: 20px;
+}
+
+input[type="checkbox"]{
+  width: 20px;
+  height: 20px;
+  margin-top: 20px;
+ margin-right: 24px;
+
+
+
+}
+
+.r{
+  display: flex;
+  align-items: center;
+  
+  
+}
